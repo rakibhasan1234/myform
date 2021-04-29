@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="with=divice-width">
+ <style type="text/css" media="all">
+ *{
+   margin: 0;
+   padding: 0;
+ }
+   .main{
+    min-height:100vh ;
+    width: 100%;
+    background:white;
+    position: absolute;
+     
+   }
+   .sub{
+     min-height:100vh;
+     width:60%;
+     background: white;
+     position:relative;
+     left:19%;
+     box-shadow: 500px 200px 1200px 1000px ghostwhite,-1000px -500px 1200px 1000px whitesmoke,500px 200px 1200px 1000px ghostwhite,-1000px -500px 1200px 1000px whitesmoke;
+     font-size:25px;
+   }
+   .head{height:50px;
+   width: 100%;
+   background:blue;
+   font-size:40px;
+text-align: center;
+color:white;
+   }
+   .foot{
+     height:30px;
+     widthh:100%;
+     background:blue;
+     position:relative;
+     top:2px;
+   }
+   #UserName{
+     height:45px;
+     outline: none;
+     background: grey;
+     border: none;
+  font-size:25px;
+  color: white;
+  width:180px;
+   }
+   
+   #PasswordName{
+      height:45px;
+     outline: none;
+     background: grey;
+     border: none;
+  font-size:25px;
+  color: white;
+  width:180px;
+  margin-left:6px;
+     
+   }
+   
+   ::placeholder{
+     font-size:16px;
+     color:whitesmoke;
+   }
+  #conpasswordName{
+      height:45px;
+     outline: none;
+     background: grey;
+     border: none;
+  font-size:25px;
+  color: white;
+  width:180px;
+  margin-left:25px;
+  }
+  #subm{
+    height:70px;
+    width:100%;
+    border:noen;
+    outline: none;
+    background:skyblue;
+    font-size:34px;
+    color:white;
+  }
+  #subm:hover{
+    background:blue;
+    font-size:25px;
+  }
+#check{
+  height:25px;
+  width:30px;
+}
+ </style>
+    <title></title>
+  </head>
+  <body>
+    <form onsubmit="return myFormName()" method="get" accept-charset="utf-8"id="form">
+      
+  
+    <div class="main">
+ 
+       <div class="sub">
+         <div class="head">
+           Rakib Khan
+           
+         </div><br>
+         user name: <input type="text/submit/hidden/button/image" name="" id="UserName" value=""placeholder="Enter user Name" /><span id="spanx"></span> <br><br> <br
+            <span>Password:</span> <input type="Password" id="PasswordName"value=""placeholder="Enter your Password"><input onclick="mycheck()" type="checkbox" name="" id="check" />show<span id="spanxx"></span><br><br><br>
+            <span>Confrim:</span> <input type="password" name="" id="conpasswordName" value="" placeholder="Enter confrim password"/><span id="spanxxx"><input onclick="mycheckcon()"type="checkbox" name="check" id="check" />seen</span> <br><br>
+            <input type="submit" name="" id="subm" value="Submit" />
+         
+         <div class="foot"></div>
+       </div>
+    </div>
+    </form>
+     
+<script>
+var span=document.getElementById("spanx");
+var myfunc=document.getElementById("UserName");
+function myFormName()
+{ var UserName=document.getElementById("UserName").value;
+var PasswordName=document.getElementById("PasswordName").value;
+var conpasswordName=document.getElementById("conpasswordName").value;
+var spanx=document.getElementById("spanxx");
+var myfun=document.getElementById("PasswordName");
+var spanxx=document.getElementById("spanxxx");
+var myfu=document.getElementById("conpasswordName");
+if(UserName.length <5)
+{
+   span.innerHTML="**UserName mast minimum 5 digit**";
+  span.style.color="red";
+  myfunc.style.border="1px solid red";
+  myfunc.style.background="red";
+}
+if(UserName.length >13)
+{
+   span.innerHTML="**UserName mast maximum 13 digit**";
+  span.style.color="red";
+  myfunc.style.border="1px solid red";
+  myfunc.style.background="red";
+}
+if(UserName.length >4&&UserName.length <14)
+{
+  myfunc.style.border="1px solid green";
+  myfunc.style.background="blue";
+}
+
+if(UserName=="")
+{
+  span.innerHTML="**invlid UserName please enter**";
+  span.style.color="red";
+  myfunc.style.border="1px solid red";
+  myfunc.style.background="red";
+}
+if(PasswordName.length <=5)
+{
+  spanx.innerHTML="**password mast enter 6 digit**";
+  spanx.style.color="red";
+  myfun.style.border="1px solid red";
+  myfun.style.background="red";
+}
+if(PasswordName.length >=12)
+{
+  spanx.innerHTML="**password mast enter under 11 digit**";
+  spanx.style.color="red";
+  myfun.style.border="1px solid red";
+  myfun.style.background="red";
+}
+if(PasswordName.length >5&&UserName.length <12)
+{
+  myfun.style.border="1px solid green";
+  myfun.style.background="blue";
+}
+if(PasswordName=="")
+{
+  spanx.innerHTML="**invlid password please enter**";
+  spanx.style.color="red";
+  myfun.style.border="1px solid red";
+  myfun.style.background="red";
+}
+if(conpasswordName.length <=5)
+{
+  spanxx.innerHTML="**password mast enter 6 digit**";
+  spanxx.style.color="red";
+  myfu.style.border="1px solid red";
+  myfu.style.background="red";
+}
+if(conpasswordName.length >=12)
+{
+  spanxx.innerHTML="**password mast enter under 11 digit**";
+  spanxx.style.color="red";
+  myfu.style.border="1px solid red";
+  myfu.style.background="red";
+}
+if(conpasswordName.length >5&&UserName.length <12)
+{
+  myfu.style.border="1px solid green";
+  myfu.style.background="blue";
+}
+if(conpasswordName=="")
+{
+   spanxx.innerHTML="**invlid password please enter **";
+  spanxx.style.color="red";
+  myfu.style.border="1px solid red";
+  myfu.style.background="red";
+}
+if(PasswordName!==conpasswordName)
+{
+  spanxx.innerHTML="don't match please check password";
+  spanxx.style.color="red";
+  myfu.style.background="black";
+}
+if(PasswordName===conpasswordName&&UserName.length>4&&UserName.length<14&&PasswordName.length>5&&PasswordName.length<12&&conpasswordName.length>5&&conpasswordName.length<12)
+{
+  myfu.style.background="gold";
+  myfu.style.border="3px solid green";
+  spanxx.style.color="blue";
+  spanxx.innerHTML="success";
+  document.getElementById("form").action="https://www.smashingmagazine.com/2009/07/web-form-validation-best-practices-and-tutorials/";
+}
+}
+  function mycheck()
+  {
+    var checkpass=document.getElementById("PasswordName");
+    if(checkpass.type==="password")
+    {
+      checkpass.type="text";
+    }
+    else 
+    {
+      checkpass.type="password";
+    }
+    if(checkpass.type=="text")
+    {
+      document.getElementById("PasswordName").style.border="4px solid blue";
+    }
+    else
+    {document.getElementById("PasswordName").style.border="none"}
+  }
+  function mycheckcon()
+  {
+    var checkcon=document.getElementById("conpasswordName");
+    if(checkcon.type==="password")
+    {
+      checkcon.type="text";
+      
+    }
+    else
+    {
+      checkcon.type="password";
+    }
+if(checkcon.type=="text")
+    {
+      document.getElementById("conpasswordName").style.border="4px solid blue";
+    }
+    else
+    {document.getElementById("conpasswordName").style.border="none"}
+  }
+</script>
+  </body>
+</html>
